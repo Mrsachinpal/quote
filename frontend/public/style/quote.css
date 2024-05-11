@@ -1,0 +1,18 @@
+.quote-card img{
+    width: 50%;
+    height:40px;
+}
+.quote-tag ,.quote-topic{
+    font-size: small;
+}
+/* .quote-link-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+} */
+.quote-link{
+    margin-right: 5px;
+    font-size: large;
+    color: black;
+}

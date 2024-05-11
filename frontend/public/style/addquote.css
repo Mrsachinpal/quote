@@ -1,0 +1,34 @@
+label{
+    display: block;
+    font-weight: bold;
+}
+.addquote-quote-div{
+    padding: 10px;
+
+}
+.addquote-author-div{
+    padding: 10px;
+}
+
+.addquote-heading{
+    text-align: center;
+}
+.input-div{
+    width: 100%;
+    margin: 1%;
+}
+
+.input-div input::placeholder{
+    color: brown;
+}
+
+.addquote-submit-button{
+    background-color: transparent;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+.addquote-submit-button:hover{
+    background-color: peru;
+    border-color: transparent;
+    transition: 0.2s ease-in-out;
+}

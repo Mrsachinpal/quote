@@ -1,0 +1,32 @@
+.footer {
+    background-color: #cc9037;
+    color: white;
+}
+
+.footer ul li {
+    list-style: none;
+    color: white;
+}
+.footer div div  {
+    padding: 0;
+}
+.footer ul li a {
+    color: black;
+    text-decoration: none;
+    color: white;
+}
+.footer ul li a:hover{
+    background-color: white;
+    color:black;
+    transition: 0.2s ease-in-out;
+}
+.row {
+    --bs-gutter-x: 0rem;
+}
+ 
+
+ @media screen and  (max-width: 768px) {
+    .footer div div {
+        margin-bottom: 3%;
+    }
+}

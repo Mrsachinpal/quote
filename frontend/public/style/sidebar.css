@@ -1,0 +1,8 @@
+.sidebar-link{
+    text-decoration: none;
+    color: #cc9037;
+    font-size: small;
+}
+.sidebar-link:hover{
+    color: rgb(1, 67, 143);
+}
