@@ -1,18 +1,59 @@
-.quote-card img{
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Roboto+Mono:ital,wght@1,601&display=swap');
+/* .quote-card img{
     width: 50%;
     height:40px;
-}
-.quote-tag ,.quote-topic{
+} */
+/* .quote-tag ,.quote-topic{
     font-size: small;
-}
+} */
 /* .quote-link-p{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: end;
 } */
-.quote-link{
+/* .quote-link{
     margin-right: 5px;
     font-size: large;
     color: black;
+} */
+
+.quote-card {
+    border-radius: 50px;
+    padding: 40px;
+    text-align: center;
+    min-height: 250px;
+    max-height: auto;
+    background-color: antiquewhite;
+    border: none;
+    margin-top: 2%;
+    box-sizing: border-box;
+}
+
+.quote-card-text {
+    font-size: large;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.25rem;
+    min-height: 140px;
+    max-height: auto;
+}
+
+.quote-icon i {
+    font-size: 22px;
+    margin-right: 2%;
+    color: black
+}
+.quote-icon i:hover {
+    color: peru;
+    transition: 0.2s ease-in-out;
+}
+
+.quote-link{
+    color: green;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:12px;
+}
+.quote-link:hover{
+   text-decoration: underline;
 }

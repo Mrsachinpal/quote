@@ -30,30 +30,30 @@ function Mainnavbar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg border">
-                <div className="container">
-                    <Link className="navbar-brand" to={'/quote'}>uddharan</Link>
+            <nav className="navbar navbar-expand-lg border ">
+                <div className="container mx-auto w-50">
+                    <Link className="navbar-brand" to={'/quote'}>Quotes</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to={'/'}>Authors</Link>
+                                <Link className="nav-link" to={'/author'}>Authors</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={'/'}>Topics</Link>
+                                <Link className="nav-link" to={'/tags'}>Tags</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to={'/'}>Quote of the day</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={'/'}>Picture Quote</Link>
+                                <Link className="nav-link" to={'/allimagequote'}>Picture Quote</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to={'/add'}>New Quotes</Link>
                             </li>
-                            <li className="nav-item dropdown">
+                            {/* <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="fa-solid fa-user"></i> My Account
                                 </Link>
@@ -69,9 +69,9 @@ function Mainnavbar() {
                                         </li>
                                     )}
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
-                        <ul className="navbar-nav mb-2 mb-lg-0">
+                        {/* <ul className="navbar-nav mb-2 mb-lg-0"> */}
                             {/* {isLoggedIn ? (
                                 <li className="nav-item">
                                     <Link className="nav-link" to={'/logout'} onClick={handleLogout}>
@@ -86,7 +86,7 @@ function Mainnavbar() {
                                 </li>
                             )} */}
 
-                            {!isLoggedIn && (
+                            {/* {!isLoggedIn && (
                                 <li className="nav-item">
                                     <Link className="nav-link" to={'/login'}>
                                         Login
@@ -96,7 +96,7 @@ function Mainnavbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to={'/login/register'}>Sign up</Link>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </nav>

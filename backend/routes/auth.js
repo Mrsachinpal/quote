@@ -1,38 +1,29 @@
 const express = require('express');
 const User = require('../model/User');
 const router = express.Router();
-const passport = require('passport')
+const passport = require('passport');
+const { isLoggedIn } = require('../middleware');
 
+// Registration route
 router.post('/login/register', async (req, res) => {
     try {
         let { email, name, username, password } = req.body;
         let user = new User({ email, name, username });
         let newUser = await User.register(user, password);
-        console.log("axios chala or backend tak aaya")
+        // console.log("Successfully registered")
         res.redirect('/');
-    }
-    catch (e) {
+    } catch (e) {
         res.status(500).send(e);
     }
-})
-router.post('/login', function (req, res, next) {
-    passport.authenticate('local', function (err, user, info) {
-        if (err) {
-            return next(err);
-        }
-        if (!user) {
-            return res.status(401).send('Invalid username or password');
-        }
-        req.logIn(user, function (err) {
-            if (err) {
-                return next(err);
-            }
-            console.log(`${user} user logged in `)
-            return res.send('Valid user');
-        });
-    })(req, res, next);
 });
 
+// Login route
+router.post('/login', passport.authenticate('local'), (req, res) => {
+    // console.log(`Logged in user: ${req.user}`);
+    res.send('Logged in successfully');
+});
+
+// Logout route
 router.get('/logout', (req, res) => {
     req.logout((err) => {
         if (err) {
@@ -44,6 +35,11 @@ router.get('/logout', (req, res) => {
     });
 });
 
+// Example protected route (requires authentication)
+router.get('/protected', isLoggedIn, (req, res) => {
+    // This route can only be accessed by authenticated users
+    // console.log(`Logged in user: ${req.user}`);
+    res.send('Protected route accessed successfully');
+});
 
-
-module.exports = router
+module.exports = router;
